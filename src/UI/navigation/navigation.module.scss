@@ -1,0 +1,46 @@
+.NavWrapper {
+  display: flex;
+  height: 75px;
+  border-bottom: 1px solid lightgray;
+  nav {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: flex-start;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      li {
+        margin-left: 30px;
+        cursor: pointer;
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
+        .Badge {
+          border-radius: 50%;
+          position: absolute;
+          span {
+            box-sizing: border-box;
+            display: flex;
+            font-size: 10px;
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+.Readonly {
+  color: gray;
+  cursor: default;
+  &.UserReadOnly {
+    display: flex;
+    align-items: center;
+  }
+}

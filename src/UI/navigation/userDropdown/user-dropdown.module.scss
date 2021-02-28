@@ -1,0 +1,66 @@
+.Main {
+  display: flex;
+  align-items: center;
+  > div {
+    position: relative;
+    top: 14px;
+    .Heading {
+      margin-bottom: 29px;
+      cursor: pointer;
+      user-select: none;
+      .Badge {
+        border-radius: 50%;
+        position: absolute;
+        span {
+          box-sizing: border-box;
+          display: flex;
+          font-size: 10px;
+          justify-content: center;
+        }
+      }
+    }
+    .DropdownMain {
+      border: 1px solid #f1f1f1;
+      border-top: 0;
+      margin: 0;
+      display: none;
+      position: absolute;
+      list-style: none;
+      flex-direction: column;
+      right: 0;
+      z-index: 99;
+      min-width: 15rem;
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+        li {
+          p {
+            padding: 10px;
+            cursor: pointer;
+            margin: 0;
+            a {
+              text-decoration: none;
+              color: inherit;
+            }
+          }
+          &:hover {
+            background: #f1f1f1;
+          }
+        }
+      }
+    }
+
+    &.DropdownOpen {
+      .DropdownMain {
+        display: flex;
+      }
+    }
+  }
+}
+
+p {
+  margin: 0;
+  line-height: normal;
+}
